@@ -355,7 +355,7 @@ class Server(object):
         response_json = {}
         resp_text = response.text
         if resp_text:
-            response_json = json.loads(resp_text)
+            response_json = resp_text
         response_json["headers"] = dict(response.headers)
         return json.dumps(response_json)
 
